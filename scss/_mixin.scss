@@ -2,11 +2,11 @@
   @return calc(((100% - #{variable.$width-media--ld}) / 2) + #{$padding});
 }
 
-@mixin fontSize(variable.$size, $important: "") {
-  font-size: variable.$size #{$important};
-  @if variable.$size < 16 {
+@mixin fontSize($size, $important: "") {
+  font-size: $size #{$important};
+  @if $size < 16 {
     line-height: 16px #{$important};
   } @else {
-    line-height: variable.$size + 8 #{$important};
+    line-height: $size + 8 #{$important};
   }
 }
