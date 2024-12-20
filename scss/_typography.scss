@@ -3,7 +3,7 @@
   .a#{$media} {
     font-weight: normal;
     text-decoration: underline;
-    @include variable.fontSize(16px);
+    @include mixin.fontSize(16px);
   }
 
   h1,
@@ -17,50 +17,50 @@
 
   h1,
   .h1#{$media} {
-    @include variable.fontSize(40px);
+    @include mixin.fontSize(40px);
   }
   h2,
   .h2#{$media} {
-    @include variable.fontSize(32px);
+    @include mixin.fontSize(32px);
   }
   h3,
   .h3#{$media} {
-    @include variable.fontSize(24px);
+    @include mixin.fontSize(24px);
   }
 
   p,
   .p#{$media} {
     font-weight: normal;
-    @include variable.fontSize(16px);
+    @include mixin.fontSize(16px);
   }
 
   small,
   .small#{$media} {
     font-weight: normal;
-    @include variable.fontSize(14px);
+    @include mixin.fontSize(14px);
   }
 
   .font-size {
     &-12#{$media} {
-      @include variable.fontSize(12px);
+      @include mixin.fontSize(12px);
     }
     &-14#{$media} {
-      @include variable.fontSize(14px);
+      @include mixin.fontSize(14px);
     }
     &-16#{$media} {
-      @include variable.fontSize(16px);
+      @include mixin.fontSize(16px);
     }
     &-24#{$media} {
-      @include variable.fontSize(24px);
+      @include mixin.fontSize(24px);
     }
     &-32#{$media} {
-      @include variable.fontSize(32px);
+      @include mixin.fontSize(32px);
     }
     &-40#{$media} {
-      @include variable.fontSize(40px);
+      @include mixin.fontSize(40px);
     }
     &-48#{$media} {
-      @include variable.fontSize(48px);
+      @include mixin.fontSize(48px);
     }
   }
 

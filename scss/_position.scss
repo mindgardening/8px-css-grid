@@ -35,10 +35,10 @@
 
   @each $right in variable.$seq-8px {
     .right-auto#{$right}#{$media} {
-      right: variable.autoIndent(#{$right}px);
+      right: mixin.autoIndent(#{$right}px);
     }
     .right-auto-#{$right}#{$media} {
-      right: variable.autoIndent(-#{$right}px);
+      right: mixin.autoIndent(-#{$right}px);
     }
   }
 
@@ -62,10 +62,10 @@
 
   @each $left in variable.$seq-8px {
     .left-auto#{$left}#{$media} {
-      left: variable.autoIndent(#{$left}px);
+      left: mixin.autoIndent(#{$left}px);
     }
     .left-auto-#{$left}#{$media} {
-      left: variable.autoIndent(-#{$left}px);
+      left: mixin.autoIndent(-#{$left}px);
     }
   }
 }
