@@ -1,3 +1,5 @@
+@use "variable";
+
 @mixin touch($media) {
   &-auto#{$media} {
     touch-action: auto;

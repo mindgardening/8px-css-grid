@@ -1,3 +1,6 @@
+@use "variable";
+@use "mixin";
+
 * {
   box-sizing: border-box;
   outline: none;

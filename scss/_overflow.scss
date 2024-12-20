@@ -1,3 +1,5 @@
+@use "variable";
+
 @mixin overflow($media) {
   .overflow {
     &-auto#{$media} {

@@ -1,3 +1,6 @@
+@use "variable";
+@use "mixin";
+
 @mixin typography($media) {
   a,
   .a#{$media} {

@@ -1,3 +1,5 @@
+@use "variable";
+
 @mixin opacity($media) {
   @each $op in variable.$seq-percent {
     .opacity-#{$op}#{$media} {

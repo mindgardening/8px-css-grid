@@ -1,3 +1,5 @@
+@use "variable";
+
 @mixin order($media) {
   @each $or in variable.$order {
     .order-#{$or}#{$media} {

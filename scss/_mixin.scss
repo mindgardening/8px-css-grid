@@ -1,3 +1,5 @@
+@use "variables";
+
 @function autoIndent($padding) {
   @return calc(((100% - #{variable.$width-media--ld}) / 2) + #{$padding});
 }

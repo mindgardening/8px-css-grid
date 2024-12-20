@@ -1,3 +1,5 @@
+@use "variable";
+
 @mixin display($media) {
   .block#{$media} {
     display: block;

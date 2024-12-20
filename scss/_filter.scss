@@ -1,3 +1,5 @@
+@use "variable";
+
 @mixin filter($media) {
   .filter-none {
     filter: none;

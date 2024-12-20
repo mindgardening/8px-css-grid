@@ -1,3 +1,5 @@
+@use "variable";
+
 @mixin margin($media) {
   .margin-x-auto#{$media} {
     margin-left: auto;

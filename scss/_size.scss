@@ -1,3 +1,5 @@
+@use "variable";
+
 @mixin size($media) {
   .width-0#{$media} {
     width: 0;

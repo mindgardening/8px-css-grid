@@ -1,3 +1,5 @@
+@use "variable";
+
 @mixin visibility($media) {
   .hidden#{$media} {
     visibility: hidden;

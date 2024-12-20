@@ -1,3 +1,5 @@
+@use "variable";
+
 $max: 50%;
 
 @mixin border($media) {

@@ -1,3 +1,5 @@
+@use "variable";
+
 @mixin image($media) {
   .object-fit-fill#{$media} {
     object-fit: fill;

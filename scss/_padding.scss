@@ -1,3 +1,5 @@
+@use "variable";
+
 @mixin padding($media) {
   @each $padding in variable.$seq-8px {
     .padding-#{$padding}#{$media} {

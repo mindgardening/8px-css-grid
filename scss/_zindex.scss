@@ -1,3 +1,5 @@
+@use "variable";
+
 @mixin zindex($media) {
   @each $index in variable.$order {
     .zindex-#{$index}#{$media} {
