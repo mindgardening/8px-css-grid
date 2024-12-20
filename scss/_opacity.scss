@@ -1,5 +1,5 @@
 @mixin opacity($media) {
-  @each $op in $seq-percent {
+  @each $op in variable.$seq-percent {
     .opacity-#{$op}#{$media} {
       opacity: calc($op / 100);
     }
@@ -8,10 +8,10 @@
 
 @include opacity("");
 
-@media screen and (max-width: $width-media--d - 1) {
+@media screen and (max-width: variable.$width-media--d - 1) {
   @include opacity("--m");
 }
 
-@media screen and (min-width: $width-media--d) {
+@media screen and (min-width: variable.$width-media--d) {
   @include opacity("--d");
 }

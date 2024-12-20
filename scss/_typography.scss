@@ -199,7 +199,7 @@
       word-spacing: normal;
     }
 
-    @each $length in $seq-8px {
+    @each $length in variable.$seq-8px {
       &-#{$length}#{$media} {
         word-spacing: #{$length}px;
       }
@@ -221,10 +221,10 @@
 
 @include typography("");
 
-@media screen and (max-width: $width-media--d - 1) {
+@media screen and (max-width: variable.$width-media--d - 1) {
   @include typography("--m");
 }
 
-@media screen and (min-width: $width-media--d) {
+@media screen and (min-width: variable.$width-media--d) {
   @include typography("--d");
 }

@@ -48,10 +48,10 @@
 
 @include image("");
 
-@media screen and (max-width: $width-media--d - 1) {
+@media screen and (max-width: variable.$width-media--d - 1) {
   @include image("--m");
 }
 
-@media screen and (min-width: $width-media--d) {
+@media screen and (min-width: variable.$width-media--d) {
   @include image("--d");
 }

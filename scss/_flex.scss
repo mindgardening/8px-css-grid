@@ -70,10 +70,10 @@ $flex: (
 
 @include flex("");
 
-@media screen and (max-width: $width-media--d - 1) {
+@media screen and (max-width: variable.$width-media--d - 1) {
   @include flex("--m");
 }
 
-@media screen and (min-width: $width-media--d) {
+@media screen and (min-width: variable.$width-media--d) {
   @include flex("--d");
 }
