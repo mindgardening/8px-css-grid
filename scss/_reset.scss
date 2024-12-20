@@ -64,14 +64,14 @@ small {
 input,
 textarea,
 select {
+  appearance: none;
   background: none;
   border: none;
+  color: inherit;
   display: block;
   font-family: inherit;
   margin: 0;
   padding: 0;
-
-  appearance: textfield;
 
   &:disabled {
     opacity: 1;
@@ -80,21 +80,19 @@ select {
   @include fontSize(16px);
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  display: none;
-}
-
 // Remove default input style
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button,
-input {
-  -webkit-appearance: none;
+input::-webkit-inner-spin-button {
+  appearance: none;
 }
 
 // Remove Safari's interesting margin setting for input
 input::-webkit-date-and-time-value {
   margin: 0px;
+}
+
+select {
+  cursor: pointer;
 }
 
 ul {
