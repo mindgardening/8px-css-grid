@@ -1,4 +1,5 @@
 @use "variable";
+@use "mixin";
 
 @mixin position($media) {
   .absolute#{$media} {
