@@ -3,7 +3,7 @@
   .a#{$media} {
     font-weight: normal;
     text-decoration: underline;
-    @include fontSize(16px);
+    @include variable.fontSize(16px);
   }
 
   h1,
@@ -17,50 +17,50 @@
 
   h1,
   .h1#{$media} {
-    @include fontSize(40px);
+    @include variable.fontSize(40px);
   }
   h2,
   .h2#{$media} {
-    @include fontSize(32px);
+    @include variable.fontSize(32px);
   }
   h3,
   .h3#{$media} {
-    @include fontSize(24px);
+    @include variable.fontSize(24px);
   }
 
   p,
   .p#{$media} {
     font-weight: normal;
-    @include fontSize(16px);
+    @include variable.fontSize(16px);
   }
 
   small,
   .small#{$media} {
     font-weight: normal;
-    @include fontSize(14px);
+    @include variable.fontSize(14px);
   }
 
   .font-size {
     &-12#{$media} {
-      @include fontSize(12px);
+      @include variable.fontSize(12px);
     }
     &-14#{$media} {
-      @include fontSize(14px);
+      @include variable.fontSize(14px);
     }
     &-16#{$media} {
-      @include fontSize(16px);
+      @include variable.fontSize(16px);
     }
     &-24#{$media} {
-      @include fontSize(24px);
+      @include variable.fontSize(24px);
     }
     &-32#{$media} {
-      @include fontSize(32px);
+      @include variable.fontSize(32px);
     }
     &-40#{$media} {
-      @include fontSize(40px);
+      @include variable.fontSize(40px);
     }
     &-48#{$media} {
-      @include fontSize(48px);
+      @include variable.fontSize(48px);
     }
   }
 
