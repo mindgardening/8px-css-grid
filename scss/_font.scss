@@ -1,6 +1,30 @@
 @use "variable";
 @use "mixin";
 
+h1,
+h2,
+h3,
+p,
+small {
+  margin: 0;
+}
+
+h1 {
+  @include mixin.fontSize(40px);
+}
+h2 {
+  @include mixin.fontSize(32px);
+}
+h3 {
+  @include mixin.fontSize(24px);
+}
+p {
+  @include mixin.fontSize(16px);
+}
+small {
+  @include mixin.fontSize(14px);
+}
+
 @mixin typography($media) {
   a,
   .a#{$media} {
