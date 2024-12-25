@@ -1,101 +1,113 @@
-@use "variable";
+$sequence: 0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 100;
 
-@mixin filter($media) {
-  .filter-none {
+.filter {
+  &-none {
     filter: none;
   }
-  @each $brightness in variable.$seq-percent {
-    .filter-brightness-#{$brightness}#{$media} {
-      filter: brightness($brightness * 1%);
-    }
-  }
-  @each $blur in variable.$seq-percent {
-    .filter-blur-#{$blur}#{$media} {
-      filter: blur(#{$blur}px);
-    }
-  }
-  @each $contrast in variable.$seq-percent {
-    .filter-contrast-#{$contrast}#{$media} {
-      filter: contrast($contrast * 1%);
-    }
-  }
-  @each $grayscale in variable.$seq-percent {
-    .filter-grayscale-#{$grayscale}#{$media} {
-      filter: grayscale($grayscale * 1%);
-    }
-  }
-  @each $hue-rotate in variable.$seq-percent {
-    .filter-hue-rotate-#{$hue-rotate}#{$media} {
-      filter: hue-rotate($hue-rotate * 1%);
-    }
-  }
-  @each $invert in variable.$seq-percent {
-    .filter-invert-#{$invert}#{$media} {
-      filter: invert($invert * 1%);
-    }
-  }
-  @each $opacity in variable.$seq-percent {
-    .filter-opacity-#{$opacity}#{$media} {
-      filter: opacity($opacity * 1%);
-    }
-  }
-  @each $sepia in variable.$seq-percent {
-    .filter-sepia-#{$sepia}#{$media} {
-      filter: sepia($sepia * 1%);
-    }
-  }
-
-  .filter-none-bg {
-    backdrop-filter: none;
-  }
-  @each $brightness in variable.$seq-percent {
-    .filter-brightness-bg-#{$brightness}#{$media} {
-      backdrop-filter: brightness($brightness * 1%);
-    }
-  }
-  @each $blur in variable.$seq-percent {
-    .filter-blur-bg-#{$blur}#{$media} {
-      backdrop-filter: blur(#{$blur}px);
-    }
-  }
-  @each $contrast in variable.$seq-percent {
-    .filter-contrast-bg-#{$contrast}#{$media} {
-      backdrop-filter: contrast($contrast * 1%);
-    }
-  }
-  @each $grayscale in variable.$seq-percent {
-    .filter-grayscale-bg-#{$grayscale}#{$media} {
-      backdrop-filter: grayscale($grayscale * 1%);
-    }
-  }
-  @each $hue-rotate in variable.$seq-percent {
-    .filter-hue-rotate-bg-#{$hue-rotate}#{$media} {
-      backdrop-filter: hue-rotate($hue-rotate * 1%);
-    }
-  }
-  @each $invert in variable.$seq-percent {
-    .filter-invert-bg-#{$invert}#{$media} {
-      backdrop-filter: invert($invert * 1%);
-    }
-  }
-  @each $opacity in variable.$seq-percent {
-    .filter-opacity-bg-#{$opacity}#{$media} {
-      backdrop-filter: opacity($opacity * 1%);
-    }
-  }
-  @each $sepia in variable.$seq-percent {
-    .filter-sepia-bg-#{$sepia}#{$media} {
-      backdrop-filter: sepia($sepia * 1%);
-    }
-  }
 }
 
-@include filter("");
-
-@media screen and (max-width: variable.$width-media--d - 1) {
-  @include filter("--m");
+.backdrop-none {
+  backdrop-filter: none;
 }
 
-@media screen and (min-width: variable.$width-media--d) {
-  @include filter("--d");
+@each $seq in $sequence {
+  .filter {
+    &-brightness {
+      &-#{$seq} {
+        filter: brightness($seq * 1%);
+      }
+    }
+
+    &-blur {
+      &-#{$seq} {
+        filter: blur(#{$seq}px);
+      }
+    }
+
+    &-contrast {
+      &-#{$seq} {
+        filter: contrast($seq * 1%);
+      }
+    }
+
+    &-grayscale {
+      &-#{$seq} {
+        filter: grayscale($seq * 1%);
+      }
+    }
+
+    &-hue-rotate {
+      &-#{$seq} {
+        filter: hue-rotate($seq * 1%);
+      }
+    }
+
+    &-invert {
+      &-#{$seq} {
+        filter: invert($seq * 1%);
+      }
+    }
+
+    &-opacity {
+      &-#{$seq} {
+        filter: opacity($seq * 1%);
+      }
+    }
+
+    &-sepia {
+      &-#{$seq} {
+        filter: sepia($seq * 1%);
+      }
+    }
+  }
+
+  .backdrop {
+    &-brightness {
+      &-#{$seq} {
+        backdrop-filter: brightness($seq * 1%);
+      }
+    }
+
+    &-blur {
+      &-#{$seq} {
+        backdrop-filter: blur(#{$seq}px);
+      }
+    }
+
+    &-contrast {
+      &-#{$seq} {
+        backdrop-filter: contrast($seq * 1%);
+      }
+    }
+
+    &-grayscale {
+      &-#{$seq} {
+        backdrop-filter: grayscale($seq * 1%);
+      }
+    }
+
+    &-hue-rotate {
+      &-#{$seq} {
+        backdrop-filter: hue-rotate($seq * 1%);
+      }
+    }
+
+    &-invert {
+      &-#{$seq} {
+        backdrop-filter: invert($seq * 1%);
+      }
+    }
+
+    &-opacity {
+      &-#{$seq} {
+        backdrop-filter: opacity($seq * 1%);
+      }
+    }
+
+    &-sepia {
+      &-#{$seq} {
+        backdrop-filter: sepia($seq * 1%);
+      }
+    }
+  }
 }
