@@ -1,32 +1,18 @@
-@use "variable";
-
-@mixin display($media) {
-  .block#{$media} {
-    display: block;
-  }
-  .flex#{$media} {
-    display: flex;
-  }
-  .inline#{$media} {
-    display: inline;
-  }
-  .inline-block#{$media} {
-    display: inline-block;
-  }
-  .inline-flex#{$media} {
-    display: inline-flex;
-  }
-  .none#{$media} {
-    display: none;
-  }
+.block {
+  display: block;
 }
-
-@include display("");
-
-@media screen and (max-width: variable.$width-media--d - 1) {
-  @include display("--m");
+.flex {
+  display: flex;
 }
-
-@media screen and (min-width: variable.$width-media--d) {
-  @include display("--d");
+.inline {
+  display: inline;
+}
+.inline-block {
+  display: inline-block;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.none {
+  display: none;
 }
