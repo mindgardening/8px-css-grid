@@ -1,115 +1,63 @@
-@use "variable";
+.width {
+  &-vw {
+    width: 100vw;
+  }
 
-@mixin size($media) {
-  .width-0#{$media} {
+  &-none {
     width: 0;
   }
-  .width-d#{$media} {
-    max-width: variable.$width-media--d;
+
+  &-text {
+    max-width: 512px;
   }
-  .width-ld#{$media} {
-    max-width: variable.$width-media--ld;
-  }
-  .width-text#{$media} {
-    max-width: variable.$text-width;
-  }
-  .width-auto#{$media} {
+
+  &-auto {
     width: auto;
   }
 
-  .height-0#{$media} {
+  &-min {
+    min-width: 100%;
+
+    &-vw {
+      min-width: 100vw;
+    }
+  }
+
+  &-max {
+    max-width: 100%;
+
+    &-vw {
+      max-width: 100vw;
+    }
+  }
+}
+
+.height {
+  &-none {
     height: 0;
   }
 
-  @each $minWidth in variable.$size {
-    .width-min-#{$minWidth}#{$media} {
-      min-width: calc(percentage($minWidth) / 100);
+  &-min {
+    min-height: 100%;
+
+    &-vh {
+      min-height: 100vh;
     }
-  }
-  @each $width in variable.$size {
-    .width-#{$width}#{$media} {
-      width: calc(percentage($width) / 100);
-    }
-  }
-  @each $maxWidth in variable.$size {
-    .width-max-#{$maxWidth}#{$media} {
-      max-width: calc(percentage($maxWidth) / 100);
+
+    &-dvh {
+      min-height: 100dvh;
     }
   }
 
-  @each $minWidth in variable.$size {
-    .width-min-#{$minWidth}vw#{$media} {
-      min-width: #{$minWidth}vw;
-    }
-  }
-  @each $width in variable.$size {
-    .width-#{$width}vw#{$media} {
-      width: #{$width}vw;
-    }
-  }
-  @each $maxWidth in variable.$size {
-    .width-max-#{$maxWidth}vw#{$media} {
-      max-width: #{$maxWidth}vw;
-    }
-  }
+  &-max {
+    max-height: 100%;
 
-  @each $minHeight in variable.$size {
-    .height-min-#{$minHeight}#{$media} {
-      min-height: calc(percentage($minHeight) / 100);
+    &-vh {
+      max-height: 100vh;
     }
-  }
-  @each $height in variable.$size {
-    .height-#{$height}#{$media} {
-      height: calc(percentage($height) / 100);
-    }
-  }
-  @each $maxHeight in variable.$size {
-    .height-max-#{$maxHeight}#{$media} {
-      max-height: calc(percentage($maxHeight) / 100);
-    }
-  }
 
-  /* VH */
-  @each $minHeight in variable.$size {
-    .height-min-#{$minHeight}vh#{$media} {
-      min-height: #{$minHeight}vh;
+    &-dvh {
+      max-height: 100dvh;
     }
   }
-  @each $height in variable.$size {
-    .height-#{$height}vh#{$media} {
-      height: #{$height}vh;
-    }
-  }
-  @each $maxHeight in variable.$size {
-    .height-max-#{$maxHeight}vh#{$media} {
-      max-height: #{$maxHeight}vh;
-    }
-  }
-
-  /* DVH */
-  @each $minHeight in variable.$size {
-    .height-min-#{$minHeight}dvh#{$media} {
-      min-height: #{$minHeight}dvh;
-    }
-  }
-  @each $height in variable.$size {
-    .height-#{$height}dvh#{$media} {
-      height: #{$height}dvh;
-    }
-  }
-  @each $maxHeight in variable.$size {
-    .height-max-#{$maxHeight}dvh#{$media} {
-      max-height: #{$maxHeight}dvh;
-    }
-  }
-}
-
-@include size("");
-
-@media screen and (max-width: variable.$width-media--d - 1) {
-  @include size("--m");
-}
-
-@media screen and (min-width: variable.$width-media--d) {
-  @include size("--d");
 }

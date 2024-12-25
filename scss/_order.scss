@@ -1,19 +1,7 @@
-@use "variable";
+$sequence: -1, 0, 1, 2, 3, 4, 5, 6, 7, 8;
 
-@mixin order($media) {
-  @each $or in variable.$order {
-    .order-#{$or}#{$media} {
-      order: #{$or};
-    }
+@each $seq in $sequence {
+  .order-#{$seq} {
+    order: #{$seq};
   }
-}
-
-@include order("");
-
-@media screen and (max-width: variable.$width-media--d - 1) {
-  @include order("--m");
-}
-
-@media screen and (min-width: variable.$width-media--d) {
-  @include order("--d");
 }

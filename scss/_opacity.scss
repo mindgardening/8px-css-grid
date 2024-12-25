@@ -1,19 +1,7 @@
-@use "variable";
+$sequence: 0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 100;
 
-@mixin opacity($media) {
-  @each $op in variable.$seq-percent {
-    .opacity-#{$op}#{$media} {
-      opacity: calc($op / 100);
-    }
+@each $seq in $sequence {
+  .opacity-#{$seq} {
+    opacity: calc($seq / 100);
   }
-}
-
-@include opacity("");
-
-@media screen and (max-width: variable.$width-media--d - 1) {
-  @include opacity("--m");
-}
-
-@media screen and (min-width: variable.$width-media--d) {
-  @include opacity("--d");
 }

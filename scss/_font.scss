@@ -1,5 +1,6 @@
-@use "variable";
 @use "mixin";
+
+$sequence: 0, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80;
 
 a {
   font-weight: normal;
@@ -84,7 +85,7 @@ small {
   text-transform: capitalize;
 }
 
-.line-height {
+.lineheight {
   &-16 {
     line-height: 16px;
   }
@@ -105,7 +106,7 @@ small {
   }
 }
 
-.font-weight {
+.fontweight {
   &-lighter {
     font-weight: lighter;
   }
@@ -156,7 +157,7 @@ small {
   }
 }
 
-.word-break {
+.wordbreak {
   &-normal {
     word-break: normal;
   }
@@ -171,12 +172,12 @@ small {
   }
 }
 
-.word-spacing {
+.wordspacing {
   &-normal {
     word-spacing: normal;
   }
 
-  @each $length in variable.$seq-8px {
+  @each $length in $sequence {
     &-#{$length} {
       word-spacing: #{$length}px;
     }
@@ -186,7 +187,7 @@ small {
   }
 }
 
-.word-wrap {
+.wordwrap {
   &-normal {
     word-wrap: normal;
   }
@@ -195,34 +196,22 @@ small {
   }
 }
 
-@mixin align($media) {
-  .text {
-    &-left#{$media} {
-      text-align: left;
+.text {
+  &-left {
+    text-align: left;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-overflow {
+    &-ellipsis {
+      text-overflow: ellipsis;
     }
-    &-center#{$media} {
-      text-align: center;
-    }
-    &-right#{$media} {
-      text-align: right;
-    }
-    &-overflow {
-      &-ellipsis#{$media} {
-        text-overflow: ellipsis;
-      }
-      &-clip#{$media} {
-        text-overflow: clip;
-      }
+    &-clip {
+      text-overflow: clip;
     }
   }
-}
-
-@include align("");
-
-@media screen and (max-width: variable.$width-media--d - 1) {
-  @include align("--m");
-}
-
-@media screen and (min-width: variable.$width-media--d) {
-  @include align("--d");
 }

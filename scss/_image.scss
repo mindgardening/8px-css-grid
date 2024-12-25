@@ -1,75 +1,61 @@
-@use "variable";
-
-@mixin image($media) {
-  .object {
-    &-fit {
-      &-none#{$media} {
-        object-fit: none;
-      }
-
-      &-fill#{media} {
-        object-fit: fill;
-      }
-
-      &-contain#{$media} {
-        object-fit: contain;
-      }
-
-      &-cover#{$media} {
-        object-fit: cover;
-      }
-
-      &-scaledown#{$media} {
-        object-fit: scale-down;
-      }
+.object {
+  &-fit {
+    &-none {
+      object-fit: none;
     }
 
-    &-position {
-      &-l#{$media} {
-        object-position: left left;
-      }
+    &-fill#{media} {
+      object-fit: fill;
+    }
 
-      &-lc#{$media} {
-        object-position: left center;
-      }
+    &-contain {
+      object-fit: contain;
+    }
 
-      &-lr#{$media} {
-        object-position: left right;
-      }
+    &-cover {
+      object-fit: cover;
+    }
 
-      &-cl#{$media} {
-        object-position: center left;
-      }
-
-      &-c#{$media} {
-        object-position: center center;
-      }
-
-      &-cr#{$media} {
-        object-position: center right;
-      }
-
-      &-rl#{$media} {
-        object-position: right left;
-      }
-
-      &-rc#{$media} {
-        object-position: right center;
-      }
-
-      &-r#{$media} {
-        object-position: right right;
-      }
+    &-scaledown {
+      object-fit: scale-down;
     }
   }
-}
 
-@include image("");
+  &-position {
+    &-l {
+      object-position: left left;
+    }
 
-@media screen and (max-width: variable.$width-media--d - 1) {
-  @include image("--m");
-}
+    &-lc {
+      object-position: left center;
+    }
 
-@media screen and (min-width: variable.$width-media--d) {
-  @include image("--d");
+    &-lr {
+      object-position: left right;
+    }
+
+    &-cl {
+      object-position: center left;
+    }
+
+    &-c {
+      object-position: center center;
+    }
+
+    &-cr {
+      object-position: center right;
+    }
+
+    &-rl {
+      object-position: right left;
+    }
+
+    &-rc {
+      object-position: right center;
+    }
+
+    &-r {
+      object-position: right right;
+    }
+  }
 }

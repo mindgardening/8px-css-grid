@@ -1,50 +1,41 @@
-@use "variable";
-
-@mixin touch($media) {
-  &-auto#{$media} {
+.touch {
+  &-auto {
     touch-action: auto;
   }
-  &-none#{$media} {
+
+  &-none {
     touch-action: none;
   }
-  &-x#{$media} {
+
+  &-x {
     touch-action: pan-x;
   }
-  &-l#{$media} {
+
+  &-l {
     touch-action: pan-left;
   }
-  &-r#{$media} {
+
+  &-r {
     touch-action: pan-right;
   }
-  &-y#{$media} {
+
+  &-y {
     touch-action: pan-y;
   }
-  &-up#{$media} {
+
+  &-up {
     touch-action: pan-up;
   }
-  &-down#{$media} {
+
+  &-down {
     touch-action: pan-down;
   }
-  &-pinch#{$media} {
+
+  &-pinch {
     touch-action: pinch-zoom;
   }
-  &-manipulation#{$media} {
+
+  &-manipulation {
     touch-action: manipulation;
-  }
-}
-
-.touch {
-  @include touch("");
-}
-
-@media screen and (max-width: variable.$width-media--d - 1) {
-  .touch {
-    @include touch("--m");
-  }
-}
-
-@media screen and (min-width: variable.$width-media--d) {
-  .touch {
-    @include touch("--d");
   }
 }

@@ -1,54 +1,44 @@
-@use "variable";
+.overflow {
+  &-auto {
+    overflow: auto;
+  }
+  &-hidden {
+    overflow: hidden;
+  }
+  &-scroll {
+    overflow: scroll;
+  }
+  &-visible {
+    overflow: visible;
+  }
 
-@mixin overflow($media) {
-  .overflow {
-    &-auto#{$media} {
-      overflow: auto;
-    }
-    &-hidden#{$media} {
-      overflow: hidden;
-    }
-    &-scroll#{$media} {
-      overflow: scroll;
-    }
-    &-visible#{$media} {
-      overflow: visible;
-    }
-
-    &-x-auto#{$media} {
+  &-x {
+    &-auto {
       overflow-x: auto;
     }
-    &-x-hidden#{$media} {
+    &-hidden {
       overflow-x: hidden;
     }
-    &-x-scroll#{$media} {
+    &-scroll {
       overflow-x: scroll;
     }
-    &-x-visible#{$media} {
+    &-visible {
       overflow-x: visible;
     }
+  }
 
-    &-y-auto#{$media} {
+  &-y {
+    &-auto {
       overflow-y: auto;
     }
-    &-y-hidden#{$media} {
+    &-hidden {
       overflow-y: hidden;
     }
-    &-y-scroll#{$media} {
+    &-scroll {
       overflow-y: scroll;
     }
-    &-y-visible#{$media} {
+    &-visible {
       overflow-y: visible;
     }
   }
-}
-
-@include overflow("");
-
-@media screen and (max-width: variable.$width-media--d - 1) {
-  @include overflow("--m");
-}
-
-@media screen and (min-width: variable.$width-media--d) {
-  @include overflow("--d");
 }

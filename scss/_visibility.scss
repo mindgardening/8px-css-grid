@@ -1,20 +1,7 @@
-@use "variable";
-
-@mixin visibility($media) {
-  .hidden#{$media} {
-    visibility: hidden;
-  }
-  .visible#{$media} {
-    visibility: visible;
-  }
+.hidden {
+  visibility: hidden;
 }
 
-@include visibility("");
-
-@media screen and (max-width: variable.$width-media--d - 1) {
-  @include visibility("--m");
-}
-
-@media screen and (min-width: variable.$width-media--d) {
-  @include visibility("--d");
+.visible {
+  visibility: visible;
 }

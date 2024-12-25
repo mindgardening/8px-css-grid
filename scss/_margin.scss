@@ -1,87 +1,63 @@
-@use "variable";
+$sequence: 0, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80;
 
-@mixin margin($media) {
-  .margin-x-auto#{$media} {
-    margin-left: auto;
-    margin-right: auto;
-  }
+.margin-x-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  @each $margin in variable.$seq-8px {
-    .margin-#{$margin}#{$media} {
+@each $margin in $sequence {
+  .margin {
+    &-#{$margin} {
       margin: #{$margin}px;
     }
-    .margin-n#{$margin}#{$media} {
+    &-n#{$margin} {
       margin: -#{$margin}px;
     }
-  }
 
-  @each $margin in variable.$seq-8px {
-    .margin-t-#{$margin}#{$media} {
+    &-t-#{$margin} {
       margin-top: #{$margin}px;
     }
-    .margin-t-n#{$margin}#{$media} {
+    &-t-n#{$margin} {
       margin-top: -#{$margin}px;
     }
-  }
 
-  @each $margin in variable.$seq-8px {
-    .margin-r-#{$margin}#{$media} {
+    &-r-#{$margin} {
       margin-right: #{$margin}px;
     }
-    .margin-r-n#{$margin}#{$media} {
+    &-r-n#{$margin} {
       margin-right: -#{$margin}px;
     }
-  }
 
-  @each $margin in variable.$seq-8px {
-    .margin-b-#{$margin}#{$media} {
+    &-b-#{$margin} {
       margin-bottom: #{$margin}px;
     }
-    .margin-b-n#{$margin}#{$media} {
+    &-b-n#{$margin} {
       margin-bottom: -#{$margin}px;
     }
-  }
 
-  @each $margin in variable.$seq-8px {
-    .margin-l-#{$margin}#{$media} {
+    &-l-#{$margin} {
       margin-left: #{$margin}px;
     }
-    .margin-l-n#{$margin}#{$media} {
+    &-l-n#{$margin} {
       margin-left: -#{$margin}px;
     }
-  }
 
-  @each $margin in variable.$seq-8px {
-    .margin-x-#{$margin}#{$media} {
+    &-x-#{$margin} {
       margin-left: #{$margin}px;
       margin-right: #{$margin}px;
     }
-
-    .margin-x-n#{$margin}#{$media} {
+    &-x-n#{$margin} {
       margin-left: -#{$margin}px;
       margin-right: -#{$margin}px;
     }
-  }
 
-  @each $margin in variable.$seq-8px {
-    .margin-y-#{$margin}#{$media} {
+    &-y-#{$margin} {
       margin-bottom: #{$margin}px;
       margin-top: #{$margin}px;
     }
-
-    .margin-y-n#{$margin}#{$media} {
+    &-y-n#{$margin} {
       margin-bottom: -#{$margin}px;
       margin-top: -#{$margin}px;
     }
   }
-}
-
-@include margin("");
-
-@media screen and (max-width: variable.$width-media--d - 1) {
-  @include margin("--m");
-}
-
-@media screen and (min-width: variable.$width-media--d) {
-  @include margin("--d");
 }

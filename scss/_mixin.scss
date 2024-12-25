@@ -1,14 +1,9 @@
-@use "variable";
-
-@function autoIndent($padding) {
-  @return calc(((100% - #{variable.$width-media--ld}) / 2) + #{$padding});
-}
-
 @mixin fontSize($size, $important: "") {
-  font-size: $size #{$important};
+  font-size: $size;
+
   @if $size < 16 {
-    line-height: 16px #{$important};
+    line-height: 16px;
   } @else {
-    line-height: $size + 8 #{$important};
+    line-height: $size + 8;
   }
 }

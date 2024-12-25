@@ -1,19 +1,7 @@
-@use "variable";
+$sequence: -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 80;
 
-@mixin zindex($media) {
-  @each $index in variable.$order {
-    .zindex-#{$index}#{$media} {
-      z-index: #{$index};
-    }
+@each $seq in $sequence {
+  .zindex-#{$seq} {
+    z-index: #{$seq};
   }
-}
-
-@include zindex("");
-
-@media screen and (max-width: variable.$width-media--d - 1) {
-  @include zindex("--m");
-}
-
-@media screen and (min-width: variable.$width-media--d) {
-  @include zindex("--d");
 }

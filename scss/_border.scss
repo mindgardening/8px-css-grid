@@ -1,48 +1,50 @@
 $max: 50%;
-$sequence: 0, 8, 16, 24, 32, 40;
+$sequence: 0, 2, 4, 8, 16, 24, 32, 40;
 
 .radius-max {
   border-radius: $max;
 }
 
-@each $radius in $sequence {
-  .radius-#{$radius} {
-    border-radius: #{$radius}px;
-  }
+@each $seq in $sequence {
+  .radius {
+    &-#{$seq} {
+      border-radius: #{$seq}px;
+    }
 
-  .radius-tl-#{$radius} {
-    border-top-left-radius: #{$radius}px;
-  }
+    &-tl-#{$seq} {
+      border-top-left-radius: #{$seq}px;
+    }
 
-  .radius-tr-#{$radius} {
-    border-top-right-radius: #{$radius}px;
-  }
+    &-tr-#{$seq} {
+      border-top-right-radius: #{$seq}px;
+    }
 
-  .radius-bl-#{$radius} {
-    border-bottom-left-radius: #{$radius}px;
-  }
+    &-bl-#{$seq} {
+      border-bottom-left-radius: #{$seq}px;
+    }
 
-  .radius-br-#{$radius} {
-    border-bottom-right-radius: #{$radius}px;
-  }
+    &-br-#{$seq} {
+      border-bottom-right-radius: #{$seq}px;
+    }
 
-  .radius-t-#{$radius} {
-    border-top-left-radius: #{$radius}px;
-    border-top-right-radius: #{$radius}px;
-  }
+    &-t-#{$seq} {
+      border-top-left-radius: #{$seq}px;
+      border-top-right-radius: #{$seq}px;
+    }
 
-  .radius-r-#{$radius} {
-    border-top-right-radius: #{$radius}px;
-    border-bottom-right-radius: #{$radius}px;
-  }
+    &-r-#{$seq} {
+      border-top-right-radius: #{$seq}px;
+      border-bottom-right-radius: #{$seq}px;
+    }
 
-  .radius-b-#{$radius} {
-    border-bottom-left-radius: #{$radius}px;
-    border-bottom-right-radius: #{$radius}px;
-  }
+    &-b-#{$seq} {
+      border-bottom-left-radius: #{$seq}px;
+      border-bottom-right-radius: #{$seq}px;
+    }
 
-  .radius-l-#{$radius} {
-    border-top-left-radius: #{$radius}px;
-    border-bottom-left-radius: #{$radius}px;
+    &-l-#{$seq} {
+      border-top-left-radius: #{$seq}px;
+      border-bottom-left-radius: #{$seq}px;
+    }
   }
 }
