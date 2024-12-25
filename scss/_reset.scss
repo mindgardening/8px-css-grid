@@ -18,64 +18,6 @@ html {
   @include mixin.fontSize(16px);
 }
 
-h1,
-h2,
-h3,
-p,
-small {
-  margin: 0;
-}
-
-h1 {
-  @include mixin.fontSize(40px);
-}
-h2 {
-  @include mixin.fontSize(32px);
-}
-h3 {
-  @include mixin.fontSize(24px);
-}
-p {
-  @include mixin.fontSize(16px);
-}
-small {
-  @include mixin.fontSize(14px);
-}
-
-input,
-textarea,
-select {
-  appearance: none;
-  background: none;
-  border: none;
-  color: inherit;
-  display: block;
-  font-family: inherit;
-  margin: 0;
-  padding: 0;
-
-  &:disabled {
-    opacity: 1;
-  }
-
-  @include mixin.fontSize(16px);
-}
-
-// Remove default input style
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  appearance: none;
-}
-
-// Remove Safari's interesting margin setting for input
-input::-webkit-date-and-time-value {
-  margin: 0px;
-}
-
-select {
-  cursor: pointer;
-}
-
 ul {
   list-style: none;
   margin: 0;
