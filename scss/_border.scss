@@ -1,108 +1,48 @@
-@use "variable";
-
 $max: 50%;
+$sequence: 0, 8, 16, 24, 32, 40;
 
-@mixin border($media) {
-  @each $radius in variable.$seq-8px {
-    .radius-#{$radius}#{$media} {
-      border-radius: #{$radius}px;
-    }
-  }
-  .radius-max#{$media} {
-    border-radius: $max;
-  }
-
-  @each $radius in variable.$seq-8px {
-    .radius-tl-#{$radius}#{$media} {
-      border-top-left-radius: #{$radius}px;
-    }
-  }
-  .radius-tl-max#{$media} {
-    border-top-left-radius: $max;
-  }
-
-  @each $radius in variable.$seq-8px {
-    .radius-tr-#{$radius}#{$media} {
-      border-top-right-radius: #{$radius}px;
-    }
-  }
-  .radius-tr-max#{$media} {
-    border-top-right-radius: $max;
-  }
-
-  @each $radius in variable.$seq-8px {
-    .radius-bl-#{$radius}#{$media} {
-      border-bottom-left-radius: #{$radius}px;
-    }
-  }
-  .radius-bl-max#{$media} {
-    border-bottom-left-radius: $max;
-  }
-
-  @each $radius in variable.$seq-8px {
-    .radius-br-#{$radius}#{$media} {
-      border-bottom-right-radius: #{$radius}px;
-    }
-  }
-  .radius-br-max#{$media} {
-    border-bottom-right-radius: $max;
-  }
-
-  @each $radius in variable.$seq-8px {
-    .radius-t-#{$radius}#{$media} {
-      border-top-left-radius: #{$radius}px;
-      border-top-right-radius: #{$radius}px;
-    }
-  }
-
-  .radius-t-max#{$media} {
-    border-top-left-radius: $max;
-    border-top-right-radius: $max;
-  }
-
-  @each $radius in variable.$seq-8px {
-    .radius-r-#{$radius}#{$media} {
-      border-top-right-radius: #{$radius}px;
-      border-bottom-right-radius: #{$radius}px;
-    }
-  }
-
-  .radius-r-max#{$media} {
-    border-top-right-radius: $max;
-    border-bottom-right-radius: $max;
-  }
-
-  @each $radius in variable.$seq-8px {
-    .radius-b-#{$radius}#{$media} {
-      border-bottom-left-radius: #{$radius}px;
-      border-bottom-right-radius: #{$radius}px;
-    }
-  }
-
-  .radius-b-max#{$media} {
-    border-bottom-left-radius: $max;
-    border-bottom-right-radius: $max;
-  }
-
-  @each $radius in variable.$seq-8px {
-    .radius-l-#{$radius}#{$media} {
-      border-top-left-radius: #{$radius}px;
-      border-bottom-left-radius: #{$radius}px;
-    }
-  }
-
-  .radius-l-max#{$media} {
-    border-top-left-radius: $max;
-    border-bottom-left-radius: $max;
-  }
+.radius-max {
+  border-radius: $max;
 }
 
-@include border("");
+@each $radius in $sequence {
+  .radius-#{$radius} {
+    border-radius: #{$radius}px;
+  }
 
-@media screen and (max-width: variable.$width-media--d - 1) {
-  @include border("--m");
-}
+  .radius-tl-#{$radius} {
+    border-top-left-radius: #{$radius}px;
+  }
 
-@media screen and (min-width: variable.$width-media--d) {
-  @include border("--d");
+  .radius-tr-#{$radius} {
+    border-top-right-radius: #{$radius}px;
+  }
+
+  .radius-bl-#{$radius} {
+    border-bottom-left-radius: #{$radius}px;
+  }
+
+  .radius-br-#{$radius} {
+    border-bottom-right-radius: #{$radius}px;
+  }
+
+  .radius-t-#{$radius} {
+    border-top-left-radius: #{$radius}px;
+    border-top-right-radius: #{$radius}px;
+  }
+
+  .radius-r-#{$radius} {
+    border-top-right-radius: #{$radius}px;
+    border-bottom-right-radius: #{$radius}px;
+  }
+
+  .radius-b-#{$radius} {
+    border-bottom-left-radius: #{$radius}px;
+    border-bottom-right-radius: #{$radius}px;
+  }
+
+  .radius-l-#{$radius} {
+    border-top-left-radius: #{$radius}px;
+    border-bottom-left-radius: #{$radius}px;
+  }
 }
