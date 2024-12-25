@@ -1,50 +1,66 @@
 @use "variable";
 
 @mixin image($media) {
-  .object-fit-fill#{$media} {
-    object-fit: fill;
-  }
-  .object-fit-contain#{$media} {
-    object-fit: contain;
-  }
-  .object-fit-cover#{$media} {
-    object-fit: cover;
-  }
-  .object-fit-none#{$media} {
-    object-fit: none;
-  }
-  .object-fit-scale-down#{$media} {
-    object-fit: scale-down;
-  }
+  .object {
+    &-fit {
+      &-none#{$media} {
+        object-fit: none;
+      }
 
-  .object-position-l#{$media} {
-    object-position: left left;
-  }
-  .object-position-lc#{$media} {
-    object-position: left center;
-  }
-  .object-position-lr#{$media} {
-    object-position: left right;
-  }
+      &-fill#{media} {
+        object-fit: fill;
+      }
 
-  .object-position-cl#{$media} {
-    object-position: center left;
-  }
-  .object-position-c#{$media} {
-    object-position: center center;
-  }
-  .object-position-cr#{$media} {
-    object-position: center right;
-  }
+      &-contain#{$media} {
+        object-fit: contain;
+      }
 
-  .object-position-rl#{$media} {
-    object-position: right left;
-  }
-  .object-position-rc#{$media} {
-    object-position: right center;
-  }
-  .object-position-r#{$media} {
-    object-position: right right;
+      &-cover#{$media} {
+        object-fit: cover;
+      }
+
+      &-scaledown#{$media} {
+        object-fit: scale-down;
+      }
+    }
+
+    &-position {
+      &-l#{$media} {
+        object-position: left left;
+      }
+
+      &-lc#{$media} {
+        object-position: left center;
+      }
+
+      &-lr#{$media} {
+        object-position: left right;
+      }
+
+      &-cl#{$media} {
+        object-position: center left;
+      }
+
+      &-c#{$media} {
+        object-position: center center;
+      }
+
+      &-cr#{$media} {
+        object-position: center right;
+      }
+
+      &-rl#{$media} {
+        object-position: right left;
+      }
+
+      &-rc#{$media} {
+        object-position: right center;
+      }
+
+      &-r#{$media} {
+        object-position: right right;
+      }
+    }
   }
 }
 
