@@ -1,0 +1,33 @@
+input,
+textarea,
+select {
+  appearance: none;
+  background: none;
+  border: none;
+  color: inherit;
+  display: block;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+
+  &:disabled {
+    opacity: 0.32;
+  }
+
+  @include mixin.fontSize(16px);
+}
+
+// Remove default input style
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+// Remove Safari's interesting margin setting for input
+input::-webkit-date-and-time-value {
+  margin: 0px;
+}
+
+select {
+  cursor: pointer;
+}
